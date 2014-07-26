@@ -63,15 +63,15 @@
 		that exposes triggers to be set as properties. SchedulerFactoryBean schedules 
 		the actual jobs with those triggers See: 25.6.3 Wiring up jobs using triggers 
 		and the SchedulerFactoryBean @http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/scheduling.html -->
-	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean"
+	<!--bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean"
 		p:waitForJobsToCompleteOnShutdown="true">
 		<property name="triggers">
 			<list>
 				<ref bean="simpleTrigger" />
-				<!-- <ref bean="cronTrigger" />  -->
+				
 			</list>
 		</property>
-	</bean>
+	</bean-->
    
 	<!-- ###### Notification Scheduler and Worker threads for GCM END ###### -->
 

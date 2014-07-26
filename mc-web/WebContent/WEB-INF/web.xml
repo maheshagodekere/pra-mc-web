@@ -138,6 +138,7 @@
 	<servlet>
 	    <servlet-name>mediaDownloadServlet</servlet-name>
 	    <servlet-class>com.pradeya.cast.service.MediaDownloadServlet</servlet-class>
+	    <load-on-startup>1</load-on-startup>
 	</servlet>
 
 	<servlet-mapping>
