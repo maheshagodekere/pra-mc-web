@@ -1,0 +1,181 @@
+/*========================================small box container===========================*/
+#row1 {
+	float: none;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+	padding-left: 5px;
+	padding-top: 5px;
+	width: 940px;
+}
+
+.box {
+	margin: auto 2px;
+	float: left;
+	position: relative;
+	width: 230px;
+	height: 210px;
+	background: rgba(255, 255, 255, .4);
+	-o-box-shadow: #B3B3B3 4px 4px 10px;
+	-webkit-box-shadow: #B3B3B3 4px 4px 10px;
+	-moz-box-shadow: #B3B3B3 4px 4px 10px;
+	box-shadow: #B3B3B3 4px 4px 10px;
+}
+
+/*================================================row2======================================*/
+#row2 {
+	float: none;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+	padding-left: 5px;
+	padding-top: 5px;
+	width: 940px;
+}
+
+.box2 {
+	margin: auto 2px;
+	float: left;
+	position: relative;
+	width: 230px;
+	height: 210px;
+	background: rgba(226, 222, 222, .7);
+	/* -o-box-shadow: #fff 2px 2px 5px;
+-webkit-box-shadow: #fff 2px 4px 5px;
+-moz-box-shadow: #fff 2px 2px 5px;
+ box-shadow: #fff 2px 2px 5px; */
+	border-radius: 3px;
+}
+
+.box2 h5
+{ 	color:#999999; }
+
+
+/*===============================ended====================================================*/
+#row1 li {
+	list-style: none;
+	color: #000000;
+	text-align: left;
+	margin-left:-25px;
+}
+
+#row1 li a {
+	margin-top: 15px;
+	text-decoration: none;
+	color: #999999;
+	font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+	font-size: 12px;
+	line-height: 2;
+}
+
+#row1 li a:hover {
+	color: rgb(5, 149, 193);
+	background-color: none;
+	text-decoration: underline;
+}
+
+/*===================================================row2===FOOTER========================================*/
+
+#row2 ul {
+		 margin-top:-25px;
+		margin-left:-30px;
+	}
+
+
+
+#row2 li {
+	list-style-type:none;
+	text-align: left;
+	line-height: 120%;	
+		
+}
+
+#row2 li:before {
+  color: #999999;
+  content: '+ \0000a0';
+  font-size: 1.0em;
+  font-weight: bold;
+}
+
+#row2 li a {
+	text-decoration: none;
+	color: #999999;
+	font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+	font-size: 12px;
+
+}
+
+#row2 li a:hover {
+	color: #706A6A;
+	background-color: none;
+	text-decoration: underline;
+}
+/*=========================mini-db-fp==start===============================*/
+.icondiv
+{width:60px; height:30px;  float:left; margin-left:6px;   margin-top:5px;}
+
+.textdiv
+{width:530px; height:30px;
+background-color:rgb(215, 234, 204); float:left;
+margin-left:3px; border-radius:3px;  margin-top:5px;}
+
+.numberdiv
+{
+width:55px; height:30px; background-color:rgb(215, 234, 204); float:left; margin-left:3px;
+border-radius:3px;  margin-top:5px;
+}
+
+/*----------h:outputbox style--STARTS-----------*/
+.bigbar{margin-top:8px;
+padding-left:5px;
+font-size:12px;
+float:left;
+color:#868E87;
+/* color:#54AFAC; light blue*/
+font-family: Arial,Tahoma,Helvetica,FreeSans,sans-serif;}
+
+.smallbar{margin-top:8px;
+margin-left:10px;
+float:left;
+font-size:12px;
+color:#868E87;
+font-weight: bolder;
+font-family: Arial,Tahoma,Helvetica,FreeSans,sans-serif;}
+/*----------h:outputbox style--ENDS-----------*/
+/*=========================mini-db-fp==ends===============================*/
+
+/*=========================mini-db-fp==start=========22222222==========*/
+.icondiv1
+{width:30px; height:30px;  float:left; margin-left:6px;   margin-top:5px;}
+
+.textdiv1
+{width:500px; height:30px;
+background-color:rgb(215, 234, 204); float:left;
+margin-left:3px; border-radius:3px;  margin-top:5px;
+}
+
+.numberdiv1
+{
+width:55px; height:30px; background-color:rgb(215, 234, 204); float:left; margin-left:3px;
+border-radius:3px;  margin-top:5px;
+text-align:center;
+}
+
+/*----------h:outputbox style--STARTS-----------*/
+.bigbar1{margin-top:8px;
+padding-left:5px;
+font-size:12px;
+float:left;
+color:#868E87;
+/* color:#54AFAC; light blue*/
+font-family: Arial,Tahoma,Helvetica,FreeSans,sans-serif;}
+
+.smallbar1{margin-top:8px;
+margin-left:10px;
+float:left;
+font-size:12px;
+color:#868E87;
+font-weight: bolder;
+font-family: Arial,Tahoma,Helvetica,FreeSans,sans-serif;}
+/*----------h:outputbox style--ENDS-----------*/
+/*=========================mini-db-fp==ends============22222222222==========*/

@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<title>Ad Cast and Vigil Cast - Contact Us - Pradeya
+		Technologies</title>
+	<!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
+	<meta name="viewport" content="width=device-width" />
+	<!-- End SlidesJS Required -->
+	<meta name="description"
+		content="Pradeya Technologies is a growing technology company based in Bangalore, India specializing in media casting services and products. Pradeya Ad Cast and Vigil Cast are advanced cloud based SaaS solutions which offer wide variety of advertisement and surveillance features for different market segments at an affordable cost." />
+	<link rel="shortcut icon" href="#{resource['images/favicon.ico']}"
+		type="image/x-icon" />
+
+	<f:facet name="last">
+		<h:outputStylesheet name="css/style1.css" />
+		<h:outputStylesheet name="css/new.css" />
+		<h:outputStylesheet name="css/dsh.css" />
+		<h:outputStylesheet name="css/cal-heatmap.css" />
+	</f:facet>
+	<h:outputScript library="primefaces" name="jquery/jquery.js" />
+	<h:outputScript name="js/d3.min.js" />
+	<h:outputScript name="js/cal-heatmap.min.js" />
+
+</h:head>
+<h:body>
+	<ui:include src="header.xhtml" />
+	<div id="cont_1">
+
+		<h1 class="h1style">Media Schedule</h1>
+		
+		<div class="form_cont">
+				<h:form id="form_style">
+				<div class="parttop">
+					
+					<p:dataGrid id="allmedia" var="media"
+						value="#{userUIMedia.allMedia}" columns="4" pageLinks="3" rows="4"
+						paginator="true" effect="true" paginatorPosition="top"
+						paginatorTemplate=" {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {CurrentPageReport} "
+						rowsPerPageTemplate="9,12,15">
+
+						<div class="image-box">
+						
+							<div class="photo-namer">
+								<h:outputText id="fname" value="#{media.mediaFileName}" />
+							</div>
+							<p:tooltip for="fname" value="File Name" showEffect="fade"
+								hideEffect="fade" />
+
+							<div style="padding: 2px 2px 2px 2px; border: 1px solid #021a40;">
+								<!--  p:commandLink id="basic"-->
+								<p:graphicImage value="#{imageDaoBean.image}" width="194"
+									height="107">
+									<f:param name="mpath" value="#{media.mediaPath}" />
+									<f:param name="mediaFileName" value="#{media.mediaFileName}" />
+									<f:param name="mediaType" value="#{media.mediaType}" />
+								</p:graphicImage>
+								<!-- /p:commandLink-->
+
+								<div class="photo-namebl">
+									<h:outputText id="udate" value="#{media.creationTime}" />
+								</div>
+								<p:tooltip for="udate" value="Media Upload Date"
+									showEffect="fade" hideEffect="fade" />
+
+								<div class="photo-namebm">
+									<h:outputText id="adate" value="" />
+								</div>
+								<p:tooltip for="adate" value="Media Approved Date"
+									showEffect="fade" hideEffect="fade" />
+
+								<div class="photo-namebr">
+									<h:outputText id="sdate" value="#{media.state}" />
+								</div>
+								<p:tooltip for="sdate" value="Media Scheduled Date"
+									showEffect="fade" hideEffect="fade" />
+
+								<p:commandButton id="detail" styleClass="photo-detail"
+									rendered="#{media.video}" value="" />
+								<!-- <p:tooltip for="detail" value="Media Detail" showEffect="fade" hideEffect="fade" /> -->
+
+								<p:commandButton id="schedule" styleClass="photo-schedule"
+									value="" action="#{navBean.schedule}">
+									<f:setPropertyActionListener
+										target="#{mediaSchedulerBean.mediaId}" value="#{media.id}" />
+									<f:setPropertyActionListener
+										target="#{mediaSchedulerBean.mediaPath}"
+										value="#{media.mediaPath}" />
+									<f:setPropertyActionListener
+										target="#{mediaSchedulerBean.mediaFileName}"
+										value="#{media.mediaFileName}" />
+									<f:setPropertyActionListener
+										target="#{mediaSchedulerBean.mediaType}"
+										value="#{media.mediaType}" />
+									<f:setPropertyActionListener
+										target="#{mediaSchedulerBean.clear}" value="clear" />
+								</p:commandButton>
+								<!-- <p:tooltip for="schedule" value="Media Schedule" showEffect="fade" hideEffect="fade" />  -->
+							</div>
+						</div>
+					</p:dataGrid>
+				</div>
+			</h:form>
+			<div class="partc">
+
+				<div class="partleft">
+					<h:outputText
+						value="Cast your selected media at later time using the calander below" />
+					<br></br> <br></br>
+
+
+					<div style="margin: 0px 0">
+
+						<div id="cal-heatmap" />
+
+						<p:commandButton id="next" style="float:right" value="Nxt"></p:commandButton>
+						<p:commandButton id="previous" style="float:right" value="Prv"></p:commandButton>
+					</div>
+
+
+					<script type='text/javascript'>
+						//<![CDATA[
+
+						/* $("#rewind-a-btn").on("click", function(event) {
+							calendar.rewind();
+						}); */
+						var startDate = new Date(2014, 1);
+						//http://kamisama.github.io/cal-heatmap/v2/datas-hours.json
+						var calendar = new CalHeatMap();
+						var dt = new Date();
+						var dt2;
+						
+						var caldata = "http://localhost:8080/mc-web/json/calendar";
+						var calslotbase = "http://localhost:8080/mc-web/json/calendar/slot/";
+						var calslot = calslotbase+dt.getTime();
+
+						
+						var ndate = new Date("April 10, 2014 11:13:00");
+						var cal = new CalHeatMap();
+						
+						calendar.init({
+							itemSelector : "#cal-heatmap",
+							start : startDate,
+							minDate : new Date(2014, 0),
+							maxDate : new Date(2014, 8),
+							domain : "month",
+							subDomain : "day",
+							domainGutter : 10,
+							range : 4,
+							data : caldata,
+							previousSelector : "#previous",
+							nextSelector : "#next",
+							domainMargin : 6,
+							cellSize : 17,
+							scale : [ 20, 30, 40, 50 ],
+							//tooltip : true,
+							highlight :"now",
+							legendVerticalPosition : "top",
+							subDomainTextFormat : "%d",
+							onClick : function(date, nb) {
+								calslotdata= calslot;
+								calendar.highlight(date);
+								cal.highlight(cal.options.highlight.push("now"));
+								calslot = calslotbase + date.getTime();
+								//alert(calslot);
+								cal.options.data = calslot;
+								cal.options.start = date;
+								cal.jumpTo(date);
+								
+							}
+						});
+
+						//]]>
+					</script>
+				</div>
+				<div class="partright">
+					<h2 class="subheading3">Display Options</h2>
+					<!-- p:separator id="separator4" / -->
+					<p:scrollPanel style="height:250px" mode="native">
+						<p:treeTable id="multiselect" value="#{displayUIBean.root}"
+							var="document" selectionMode="checkbox" scrollable="false"
+							scrollHeight="190" scrollWidth="300"
+							selection="#{displayUIBean.selectedNodes}">
+							<p:column>
+								<h:outputText value="#{document.name}" />
+							</p:column>
+						</p:treeTable>
+					</p:scrollPanel>
+				</div>
+			</div>
+			<div class="part3">
+				<div id="cal-heatmap-hour" />
+				<script type='text/javascript'>
+					//<![CDATA[
+
+					cal.init({
+						itemSelector : "#cal-heatmap-hour",
+						domain : "day",
+						subDomain : "hour",
+						rowLimit : 1,
+						domainGutter : 1,
+						data : calslot,
+						start : new Date(),
+						cellSize : 25,
+						cellPadding : 5,
+						range : 1,
+						//verticalOrientation : true,
+						subDomainTextFormat : function(date, value) {
+							//return date.getHours()+"A";
+							return date.getHours();
+						},
+						highlight : "now",
+						displayLegend : true,
+						legendVerticalPosition : "bottom",
+						label : {
+							position : "top"
+						},
+						legend : [ 1, 2, 3, 4 ],
+						legendColors : [ "#ecf5e2", "#232181" ],
+						onClick : function(date, nb) {
+							cal.highlight(date);
+						}
+					});
+
+					//]]>
+				</script>
+				<br></br>
+
+				<p:scrollPanel style="height:140px" mode="native">
+					<p:dataTable id="op" var="option"
+						value="#{scheduleUIBean.optionDataModel}" paginator="false"
+						rows="10" editable="true" editMode="cell">
+
+						<p:column headerText="Display" style="width:25%">
+							<h:outputText value="Bangalore:Jayanagar:Display1" />
+						</p:column>
+						<p:column headerText="Images Scheduled" style="width:25%">
+							<h:outputText value="aaa.jpg" />
+						</p:column>
+						<p:column headerText="Slot Booked (Click to edit)"
+							style="width:25%">
+							<p:cellEditor>
+
+								<f:facet name="output">
+									<h:outputText value="50" />
+								</f:facet>
+								<f:facet name="input">
+									<p:inputText id="modelInput" value="50" style="width:96%" />
+								</f:facet>
+							</p:cellEditor>
+
+
+						</p:column>
+						<p:column headerText="Slot Avaibalbe" style="width:25%">
+							<h:outputText value="200" />
+						</p:column>
+
+					</p:dataTable>
+				</p:scrollPanel>
+				<p:commandButton id="schedule"
+					style="padding:5px;width:200px;height:50px;float:right"
+					value="Schedule"></p:commandButton>
+
+
+
+			</div>
+
+		</div>
+
+		<!-- ui:include src="tree.xhtml" /-->
+	</div>
+
+	<ui:include src="footer.xhtml" />
+
+</h:body>
+</html>

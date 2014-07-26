@@ -1,0 +1,30 @@
+.panel{
+width:680px;
+background-color:rgb(205, 209, 211);
+border: none;
+}
+
+.editor{
+	
+margin-left:-15px;
+width:680px;
+
+}
+
+.barlenght{
+	
+	width:555px;
+	border:none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px 0px 3px 0px; 
+}
+
+.blenght{
+	
+	width:395px;
+	border:none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px 0px 3px 0px; 
+}

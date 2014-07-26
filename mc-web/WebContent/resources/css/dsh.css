@@ -1,0 +1,521 @@
+/* newboxfour */
+
+
+
+.newboxfour
+{
+width: 720px;
+height:90px;
+/* background-color:red; */
+float:right;
+padding-bottom: 4px;
+
+}
+.newboxfour1
+{
+width: 690px;
+height:auto;
+/* background-color:red; */
+float:left;
+padding-bottom: px;
+
+}
+
+
+.big-text
+{
+	color:white;
+	font-size:30px;
+	font-family: sans-serif;
+	font-weight: bold;	
+	padding:6px 18px 0 15px;
+	
+}
+
+.big-text1
+{
+	color:white;
+	font-size:27px;
+	font-family: sans-serif;
+	font-weight: bold;	
+	
+	padding: 5px;
+
+}
+
+.small-text
+{
+	color:white;
+	font-size:12px;
+	font-family: sans-serif;
+	text-align: center;
+	
+		
+}
+
+.small-text1
+{
+	color:white;
+	font-size:12px;
+	font-family: sans-serif;
+	text-align: center;
+	padding-right: 3px; 
+	margin-top: 5px;	
+}
+
+.numberCircle {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+	color:white;
+    background: rgba(255, 255, 255,0.5);
+   /*  border: 2px solid #666; */
+   float:left;
+    text-align: center;
+    font: 32px Arial, sans-serif;
+}
+
+.numberCircle1 {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+   margin-left:35px;
+    margin-top:3px;
+    width: 25px;
+    height: 25px;
+	
+	color:white;
+    background: rgba(255, 255, 255,0.5);
+   /*  border: 2px solid #666; */
+   float:left;
+    text-align: center;
+    font: 32px Arial, sans-serif;
+   
+}
+
+.b1
+{
+float:left;
+width:170px;
+height:80px;
+background-color:#9F3E69;
+margin:5px;
+}
+
+.b2
+{
+float:left;
+width:170px;
+height:80px;
+background-color:#F2BA4F;
+margin:5px;
+}
+
+.b3
+{
+float:left;
+width:170px;
+height:80px;
+background-color:#3EB0AD;
+margin:5px;
+}
+
+.b4
+{
+float:left;
+width:170px;
+height:80px;
+background-color:#0C90B1;
+margin:5px;
+}
+
+
+/* -------------c series ------STARTS----------*/
+.c1
+{
+float:left;
+width:155px;
+height:60px;
+background-color:#9F3E69;
+margin:5px;
+}
+
+.c2
+{
+float:left;
+width:155px;
+height:60px;
+background-color:#F2BA4F;
+margin:5px;
+}
+
+.c3
+{
+float:left;
+width:155px;
+height:60px;
+background-color:#3EB0AD;
+margin:5px;
+}
+
+.c4
+{
+float:left;
+width:155px;
+height:60px;
+background-color:#0C90B1;
+margin:5px;
+}
+/* -------------c series ------ENDS----------*/
+.clboxfour
+{
+width: 660px;
+height:90px;
+/* background-color:red; */
+float:right;
+padding-bottom: 4px;
+margin-right:-8px;
+}
+
+.clboxfoursmall
+{
+width: 660px;
+height:20px;
+/* background-color:red; */
+float:right;
+padding-bottom: 4px;
+margin-right:-8px;
+}
+
+.small-text-temp
+{
+	color:red;
+	font-size:12px;
+	font-family: sans-serif;
+	text-align: left;
+	padding: 5px;
+
+		
+}
+.bb1
+{
+float:left;
+width:155px;
+height:80px;
+background-color:#9F3E69;
+margin:5px;
+}
+
+.bb2
+{
+float:left;
+width:150px;
+height:80px;
+background-color:#F2BA4F;
+margin:5px;
+}
+
+.bb3
+{
+float:left;
+width:150px;
+height:80px;
+background-color:#3EB0AD;
+margin:5px;
+}
+
+.bb4
+{
+float:left;
+width:150px;
+height:80px;
+background-color:#0C90B1;
+margin:5px;
+}
+
+
+/* container of dashboard */
+.dshbox {
+	margin: 3px;
+	margin-bottom: -28px;
+	float: right;
+	width: 720px;
+}
+
+/* sent mail ------------------------------------------------------------*/
+.smailbox {
+	float: left;
+	width: 209px;
+}
+
+.smailhead {
+	width: 202px;
+	height: 100px;
+	background-color: #79B900;
+	color: #3F6E00;
+	text-align: center;
+	font-family: helvetica;
+}
+
+.smailfoot {
+	width: 202px;
+	height: 60px;
+	background-color: #79B900;
+	color: #3F6E00;
+	text-align: center;
+	padding-top: 10px;
+	font-family: helvetica;
+}
+
+.smailfoot p {
+	font-size: 10px;
+}
+
+/* Received mail ------------------------------------------------------------*/
+.rmailbox {
+	float: left;
+	clear: float;
+	width: 209px;
+	height: 309px;
+}
+
+.rmailhead {
+	width: 202px;
+	height: 100px;
+	background-color: #1C58BA;
+	color: #11376F;
+	text-align: center;
+	font-family: helvetica;
+}
+
+.rmailfoot {
+	width: 202px;
+	height: 60px;
+	background-color: #1C58BA;
+	color: #11376F;
+	text-align: center;
+	padding-top: 10px;
+	font-family: helvetica;
+}
+
+/* Gender ------------------------------------------------------------*/
+.gender {
+	float: left;
+	clear: float;
+	width: 300px;
+	height: 70px;
+	background-color: #6A6F72;
+	display: block-inline;
+}
+
+/* Age-group ------------------------------------------------------------*/
+.age-group {
+	float: left;
+	clear: float;
+	width: 300px;
+	height: 130px;
+	background-color: #424242;
+	margin-top: 5px;
+}
+
+/* visits ------------------------------------------------------------*/
+.visits {
+	float: left;
+	clear: float;
+	width: 300px;
+	height: 70px;
+	background-color: #D74E2A;
+	margin-top: 5px;
+}
+
+.visits p {
+	color: #C98D7E;
+	font-family: helvetica;
+	text-align: center;
+	padding: 15px;
+}
+
+.visits strong {
+	color: #AD4124;
+	font-size: 24px;
+}
+
+
+
+
+/* ap1 ------------------------------------------------------------*/
+.ap1 {
+	background-color: silver;
+	width: 720px;
+	height: 50px;
+	margin: 3px;
+	float: right;
+}
+
+.ap1 h3 {
+	color: #515254;
+	font-family: helvetica;
+	text-align: center;
+}
+
+.ap1 strong {
+	color: #E9F751;
+	font-size: 40px;
+}
+
+/*ap2 ----------------------------------------------------------------*/
+.ap2 {
+	background-color: #c5c5c5;
+	width: 720px;
+	height: 50px;
+	float: right;
+	margin: 3px;
+	display: inline;
+}
+
+.ap2 p {
+	color: #515254;
+	font-family: helvetica;
+	text-align: center;
+	float: left;
+	padding: 5px;
+	width: 225px;
+}
+
+.ap2 strong {
+	font-size: 24px;
+}
+
+/*gbox ----------------------------------------------------------------*/
+.gbox {
+	background-color: #79B900;
+	width: 720px;
+	/* height: 160px; */
+	float: right;
+	margin: 3px;
+}
+
+/*bbox ----------------------------------------------------------------*/
+.bbox {
+	background-color: #1C58BA;
+	width: 720px;
+	/* height: 160px; */
+	float: right;
+	margin: 3px;
+}
+
+
+/* ap1 ------------------------------------------------------------*/
+.aap1 {
+	/* background-color: silver; */
+	width: 720px;
+	height: 50px;
+	margin: 3px;
+	float: right;
+}
+
+.aap1 h3 {
+	color: #515254;
+	font-family: helvetica;
+	text-align: center;
+}
+
+.aap1 strong {
+	color: #E9F751;
+	font-size: 40px;
+}
+
+/*aap2 ----------------------------------------------------------------*/
+.aap2 {
+	/* background-color: #c5c5c5; */
+	width: 720px;
+	height: 50px;
+	float: right;
+	margin: 3px;
+	display: inline;
+}
+
+.aap2 p {
+	color: #515254;
+	font-family: helvetica;
+	text-align: center;
+	float: left;
+	padding: 5px;
+	width: 225px;
+}
+
+.aap2 strong {
+	font-size: 24px;
+}
+	
+	/*--------------------------------------------------------- test */
+
+	/*--------------mdgoal----------*/
+.glimg
+{
+	height:60px; width:60px;  padding:2px 20px;
+}
+/*--------------panel grid plgoal----------*/
+.plgoal
+{
+	height:60px;  width:60px; text-align:center; float:left;
+}
+
+.plgoal:hover
+{
+	height:60px;  width:60px; text-align:center; float:left; background-color:rgba(201, 202, 204,0.3);
+	-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;
+}
+
+.mdgoal
+	{
+	text-decoration:none; 
+	font-size:12px;
+	
+	}
+
+
+.goalcolor
+{
+ color:rgb(110, 107, 92);	
+ 	font-size:12px;
+
+}
+
+.goalcolor:hover
+{
+	text-decoration: underline;
+	color:rgb(70, 71, 73);
+}
+
+
+/*--------------Circlecont-----------------------*/
+.Circlecont
+{
+width: 680px;
+height:90px;
+/* background-color:red; */
+margin-left:5px;
+margin-top: -10px;
+}
+
+
+/*--------------onlyCircle-----------------------*/
+.onlyCircle {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+    width: 100px;
+    height: 100px;
+    padding: 0px;
+	color:white;
+   border: 1px solid rgba(249, 244, 244,0.5);
+     float:left;
+    text-align: center;
+    font: 32px Arial, sans-serif;
+   margin-right:10px;   margin-left:10px;
+}
+.onlyCircle:hover {
+ border: 1px solid #666;
+}
+	

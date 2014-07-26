@@ -1,0 +1,31 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:form id="form">
+
+		<p:growl id="messages" showDetail="true"  />
+
+		<p:tree value="#{treeBean.root}" var="node" dynamic="true"
+			cache="true" styleClass="cat" selectionMode="single"
+			selection="#{treeBean.selectedNode}" id="tree">
+
+			<p:ajax event="expand" update=":form:messages"
+				listener="#{treeBean.onNodeExpand}" />
+			<p:ajax event="collapse" update=":form:messages"
+				listener="#{treeBean.onNodeCollapse}" />
+			<p:ajax event="select" update=":form:messages"
+				listener="#{treeBean.onNodeSelect}" />
+			<p:ajax event="unselect" update=":form:messages"
+				listener="#{treeBean.onNodeUnselect}" />
+
+			<p:treeNode>
+				<h:outputText value="#{node.name}" />
+			</p:treeNode>
+		</p:tree>
+
+	</h:form>
+
+</ui:composition>

@@ -1,0 +1,307 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+body {
+	background: #fcfcfc;
+	letter-spacing:0;
+	color:#434343;
+	font: normal 13px Verdana;
+}
+
+
+p {
+    color: #333;
+    margin:0 0 10px;
+    font: normal 13px Verdana;
+    display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	padding: 5px 5px 0 5px;
+}
+
+small {
+    font-weight: 400;
+    color: #333;
+    
+}
+
+a:link, a:visited, a:active {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover  {
+    color: #9e2020;
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+
+
+/* Type styles */
+h1 {
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
+h2 { font-size: 18px }
+
+h3 { margin: 0 }
+
+
+
+h4 {
+	float: left;
+	font: bold 18px/21px arial;
+	padding: 10px 0 5px 15px;
+	color: #000;
+}
+h4 a {
+	background: url(#{ resource [ 'images/red.carrot.jpg' ]}) no-repeat scroll 100% 6px transparent;
+	display: block;
+	float: left;
+	padding: 0 15px 0 0;
+	margin: 0 15px 0 0;
+}
+h4 a:link {
+	color: #000;
+}
+h4 a:hover {
+	color: #E73737;
+}
+
+
+
+.p-logo {
+	
+	display: inline;
+	width: 100px;
+	height: 102px;
+}
+.p-wrap {
+	position: relative;
+	margin: 0 auto;
+	/*replace 900px with your width*/
+	width: 920px;
+}
+.p-header {
+	background: #C63E31;
+	/*background: grey;*/
+	width: 100%;
+	height: 102px;
+	float: left;
+}
+.p-header-border {
+	background: #A8342A;
+	width: 100%;
+	height: 10px;
+	float: left;
+}
+.p-red-background {
+	background: #3F0E00;
+	padding-top: 1px;
+	width: 100%;
+	float: left;
+}
+.include-cover-wide {
+	heigth: 512px;
+	padding-top: 125px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.p-include-cover-wide {
+	padding-top: 15px;
+	padding-bottom: 0;
+	width:920px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.p-content {
+	padding: 15px 0;
+	clear: both;
+}
+.p-w-banner-wrap {
+	position: relative;
+	margin: 0 auto;
+	/*replace 900px with your width*/
+	width: auto;
+	height:90px;
+}
+.p-w-banner {
+	background: #ffffff;
+	text-align: center;
+	height: 90px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 3px;
+	padding-bottom: 40px;
+}
+.p-s-banner {
+	background: #ffffff;
+	text-align: center;
+	height: 90px;
+	width:920px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	padding-top: 125px;
+}
+.p-s-no-banner {
+	background: #ffffff;
+	text-align: center;
+	width:920px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	padding-top: 110px;
+}
+.p-s-banner-wrap {
+	position: relative;
+	margin: 0 auto;
+	/*replace 900px with your width*/
+	width: auto;
+	height:90px;
+	
+}
+.p-footer{
+	width: 950px;
+	height: 30px;
+	line-height: 32px;
+	background: #dfdfdf;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+.p-footer-links{
+	text-align: center;
+	font: normal Verdana;
+	font-size: 0.663em;
+	background: #dfdfdf;
+}
+
+.p-footer-copyright{
+	text-align: center;
+	font: normal Verdana;
+	font-size: 0.663em;
+	padding: 0 0 0 0;
+	background: #dfdfdf;
+	line-height: 18px;
+}
+
+
+.p-footer-links a:link, a:visited, a:active  {
+    color: #000;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight:normal;
+    padding: 0 2px 0 2px;
+
+}
+
+.p-footer-links a:hover {
+    color: #E73737;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight:normal;
+    padding: 0 2px 0 2px;
+
+}
+
+.single-shadow{
+	background: #ffffff;
+	-moz-box-shadow: 0px 0px 6px 0px  #efefef;;
+	-webkit-box-shadow: 0px 0px 6px 0px #efefef;;
+	box-shadow: 0px 0px 6px 0px #efefef;;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
+		font: normal Verdana;
+	line-height: 16px;
+}
+
+.p-clear {
+	height: 1px;
+	overflow: hidden;
+	clear: both;
+}
+.p-line {
+	height: 1px;
+	background-color: #e5e5e5;
+	margin: 0 15px 0 15px;
+	overflow: hidden;
+}
+.single-shadow img {
+	padding: 10px 0 5px 5px;
+}
+
+.p-more {
+	float:right;
+	font: normal Verdana;
+
+}
+
+.p-more  a:link, a:visited  a:active {
+	color: #000;
+	font: normal Verdana;
+}
+.p-more a:hover {
+	color: #E73737;
+	font: normal Verdana;
+}
+
+.ul  {
+    list-style:none;
+    padding-left:20px;  
+    display: inline-block;
+    font: normal 13px Verdana;
+}
+.li {
+	background: url(#{ resource [ 'images/bullet.png' ]}) no-repeat left top;
+  	float: left;
+  	padding-left:15px;
+  	padding-bottom:10px;
+  	line-height:20px; // according to your image height
+  	width:10px;
+  	font: normal 13px Verdana;
+}
+.single-shadow ul  {
+    list-style:none;
+    padding-left:20px;  
+    display: inline-block;
+    font: normal 13px Verdana;
+}
+.single-shadow li {
+  	background: url(#{ resource [ 'images/bullet.png' ]}) no-repeat left top;
+  	float: left;
+  	padding-left:15px;
+  	padding-bottom:10px;
+  	line-height:20px; // according to your image height
+  	font: normal 13px Verdana;
+}
+.e-home-header{
+	padding: 10px 0 10px 15px;
+}
+.desc-ct {
+	background: #ffffff;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 35px;
+}
+
+.p-align{
+	padding: 0 0 0 15px;
+}
+
+.p-address {
+	background: #ffffff;
+	text-align: left;
+	padding-top: 5px;
+	padding-left: 15px;
+	font: normal 14px Verdana;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<title>Ad Cast and Vigil Cast - Contact Us - Pradeya
+		Technologies</title>
+	<!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
+	<meta name="viewport" content="width=device-width" />
+	<!-- End SlidesJS Required -->
+	<meta name="description"
+		content="Pradeya Technologies is a growing technology company based in Bangalore, India specializing in media casting services and products. Pradeya Ad Cast and Vigil Cast are advanced cloud based SaaS solutions which offer wide variety of advertisement and surveillance features for different market segments at an affordable cost." />
+	<link rel="shortcut icon" href="#{resource['images/favicon.ico']}"
+		type="image/x-icon" />
+
+	<f:facet name="last">
+		<h:outputStylesheet name="css/style1.css" />
+		<h:outputStylesheet name="css/new.css" />
+		<h:outputStylesheet name="css/dsh.css" />
+		
+
+	</f:facet>
+
+</h:head>
+<h:body>
+	<ui:include src="header.xhtml" />
+	    
+	<div id="cont_1">
+
+		<h:graphicImage name="images/banner.png" style="width:930px; padding-left:10px;"/>
+
+
+		<div id="row1">
+			<div class="box">
+				
+					<h:graphicImage name="images/green.png" width="160px" height="35px" style=" margin:0 auto; "/>
+					<h5 style="margin-top:-25px; font-family:helvetica;">Heading demo</h5><br></br>
+					<h:graphicImage name="images/i2.jpeg" alt="r1" height="85px" width="198px" align="middle"/>
+					<ul>
+						<li><h:link outcome="login.xhtml">Did you know </h:link></li>
+						<li><h:link outcome="login.xhtml">Financial literacy  </h:link></li>
+						<li><h:link outcome="login.xhtml"> News letters </h:link></li>
+					</ul>	
+			</div>
+			
+			<div class="box" >
+				<h:graphicImage name="images/yellow.PNG" width="160px" height="35px" style=" margin:0 auto; "/>
+					<h5 style="margin-top:-25px; font-family:helvetica;">Heading demo</h5><br></br>
+				<h:graphicImage name="images/i2.jpeg" height="85px" width="198px" alt="dis"></h:graphicImage>
+				<ul>
+					<li><h:link outcome="login.xhtml">Did you know </h:link></li>
+					<li><h:link outcome="login.xhtml">Financial literacy  </h:link></li>
+					<li><h:link outcome="login.xhtml"> News letters </h:link></li>
+				</ul>
+			</div>
+			
+			<div class="box" >
+				
+				<h:graphicImage name="images/red.PNG" width="160px" height="35px" style=" margin:0 auto; "/>
+					<h5 style="margin-top:-25px; font-family:helvetica;">Heading demo</h5><br></br>
+				<h:graphicImage name="images/i3.jpeg" height="85px" width="198px" alt="dis"></h:graphicImage>
+				<ul>
+					<li><h:link outcome="login.xhtml">Did you know </h:link></li>
+					<li><h:link outcome="login.xhtml">Financial literacy  </h:link></li>
+					<li><h:link outcome="login.xhtml"> News letters </h:link></li>
+				</ul>	
+			</div>
+
+			<div class="box" >
+				
+				<h:graphicImage name="images/blue.png" width="160px" height="35px" style=" margin:0 auto;  "/>
+					<h5 style="margin-top:-25px; font-family:helvetica;"><h:graphicImage name="images/lock.png" height="19px"  style=" height:20px; margin-top:-5px; margin-bottom:-5px;" />Log in</h5><br></br>
+
+
+			<h:form style="color:#999999;">
+
+				<h:panelGrid columns="1" padding="10" >
+					<p:inputText id="j_username" value="#{loginUIBean.username}" label="Name"
+						style="width:150px;">
+					</p:inputText>
+					<label><p:message  for="j_username" /></label>
+					<p:watermark for="j_username" value="Enter username" /> 
+					
+					<p:password id="j_password" value="#{loginUIBean.password}" label="Name"
+						style="width:150px;">
+					</p:password>
+					<label><p:message  for="j_password" /></label>
+					<p:watermark for="j_password" value="Enter password" /> 
+
+					<p:commandButton id="login" value="Sign In"
+						style="width:160px; height:30px;background-color:#00AEEF; color:#000; border:none;"
+						action="#{loginUIBean.login}" ajax="false" />
+				</h:panelGrid>
+			</h:form>
+					<h:link name="#" style="color:#999999; font-family:sans-serif; font-size:12px; float:left; margin-left:35px;">Forgot password ?</h:link>
+
+			</div>
+
+		
+
+
+		</div>
+	</div>
+
+         
+      <ui:include src="footer.xhtml" />
+  
+  
+</h:body>
+</html>

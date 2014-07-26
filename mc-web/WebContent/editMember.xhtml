@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<title>Ad Cast and Vigil Cast - Contact Us - Pradeya
+		Technologies</title>
+	<!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
+	<meta name="viewport" content="width=device-width" />
+	<!-- End SlidesJS Required -->
+	<meta name="description"
+		content="Pradeya Technologies is a growing technology company based in Bangalore, India specializing in media casting services and products. Pradeya Ad Cast and Vigil Cast are advanced cloud based SaaS solutions which offer wide variety of advertisement and surveillance features for different market segments at an affordable cost." />
+	<link rel="shortcut icon" href="#{resource['images/favicon.ico']}"
+		type="image/x-icon" />
+
+	<f:facet name="last">
+		<h:outputStylesheet name="css/style1.css" />
+		<h:outputStylesheet name="css/new.css" />
+		<h:outputStylesheet name="css/dsh.css" />
+
+
+	</f:facet>
+
+</h:head>
+<h:body>
+	<ui:include src="header.xhtml" />
+
+	<div id="cont_1">
+
+		<h1 class="h1style">Edit Financial Planner</h1>
+
+		<div class="form_cont">
+
+			<h:form class="form_style">
+
+				<div class="partb">
+					<h2 class="subheading">Financial Planner</h2>
+					<p class="sheading">Basic Details</p>
+					<br></br>
+
+
+					<h:panelGrid columns="2"
+						style="display:block; width:500px; padding:auto; margin-left:33px; ">
+
+						<h:outputLabel for="firstName" value="First Name:" />
+						<p:inputText id="firstName"
+							value="#{organizationUIBean.selectedFinancialPlanner.firstName}"
+							required="false" label="First Name">
+
+						</p:inputText>
+
+						<h:outputLabel for="lastName" value="Last Name:" />
+						<p:inputText id="lastName"
+							value="#{organizationUIBean.selectedFinancialPlanner.lastName}"
+							required="false" label="Last Name">
+
+						</p:inputText>
+
+						<h:outputLabel for="role" value="Role:" />
+						<p:inputText id="role"
+							value="#{organizationUIBean.selectedFinancialPlanner.role}"
+							required="false" label="Role" />
+
+
+						<h:outputLabel for="userName" value="User name:" />
+						<p:inputText id="userName"
+							value="#{organizationUIBean.selectedFinancialPlanner.userName}"
+							required="false" label="User name">
+						</p:inputText>
+
+						<h:outputLabel for="password" value="password:" />
+						<p:inputText id="password"
+							value="#{organizationUIBean.selectedFinancialPlanner.password}"
+							required="false" label="password">
+						</p:inputText>
+
+						<h:outputLabel for="lastLogin" value="Last Login:" />
+						<p:inputText id="lastLogin"
+							value="#{organizationUIBean.selectedFinancialPlanner.lastLogin}"
+							required="false" label="Last Login">
+						</p:inputText>
+					</h:panelGrid>
+				</div>
+
+				<div class="partb">
+					<h2 class="subheading">Inflation Details</h2>
+					<p class="sheading">Inflation Details</p>
+					<br></br>
+					<h:panelGrid columns="2"
+						style=" display: block; width:280px; padding:auto; margin-left:28px;">
+
+						<h:outputLabel for="phone" value="Phone:" />
+						<p:inputText id="phone"
+							value="#{organizationUIBean.selectedFinancialPlanner.phone}"
+							required="false" label="Phone">
+						</p:inputText>
+
+						<h:outputLabel for="email" value="Email:" />
+						<p:inputText id="email"
+							value="#{organizationUIBean.selectedFinancialPlanner.email}"
+							required="false" label="Email">
+						</p:inputText>
+
+						<h:outputLabel for="address1" value="Address1:" />
+						<p:inputText id="address1"
+							value="#{organizationUIBean.selectedFinancialPlanner.address1}"
+							required="false" label="address1">
+						</p:inputText>
+
+						<h:outputLabel for="address2" value="Address2:" />
+						<p:inputText id="address2"
+							value="#{organizationUIBean.selectedFinancialPlanner.address2}"
+							required="false" label="address2" />
+
+						<h:outputLabel for="designation" value="Designation:" />
+						<p:inputText id="designation"
+							value="#{organizationUIBean.selectedFinancialPlanner.designation}"
+							required="false" label="Designation" />
+							
+						<h:outputLabel for="status" value="Status:" />
+						<p:inputText id="status"
+							value="#{organizationUIBean.selectedFinancialPlanner.status}"
+							required="false" label="Status" />
+					</h:panelGrid>
+				</div>
+
+				<p:commandButton id="updateP" value="Update"
+					style="float:left; margin-left:605px; margin-top:5px;"
+					action="#{organizationUIBean.updateFinancialPlanner}" ajax="false" />
+
+			</h:form>
+		</div>
+		<ui:include src="tree.xhtml" />
+	</div>
+
+	<ui:include src="footer.xhtml" />
+
+</h:body>
+</html>

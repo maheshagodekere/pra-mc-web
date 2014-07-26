@@ -1,0 +1,40 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	
+		<div id="head" >
+		<div id="header">
+
+			<h:form id="authform">	
+			<div id="menu">
+
+
+				<h:graphicImage name="images/1.png"  alt="" style="margin-left:15px; width:300px; margin-top:30px; "/>
+
+				<ul style="font-family: sans-serif;">
+					<li><a href="http://www.pradeya.com/">HOME</a></li>
+					<li><a href="http://www.pradeya.com/products.xhtml">PRODUCTS</a></li>
+					<li><a class="scroll"  href="http://www.pradeya.com/aboutus.xhtml">ABOUT US</a></li>
+					<li><a href="http://www.pradeya.com/contactus.xhtml">CONTACT US</a></li>
+				</ul>
+
+				</div>
+				
+				<div id="admin"  style="margin-top:-30px;">
+				<ul>
+					<li><h:graphicImage name="images/administrator.png" height="10px" width="10px"  style="padding-right:3px;" rendered="#{loginUIBean.loggedIn}"/>	
+					<h:outputText value="#{loginUIBean.username}" styleClass="user" rendered="#{loginUIBean.loggedIn}" style=""/></li>
+					<li><h:outputLink value="${request.contextPath}/logout.xhtml" rendered="#{loginUIBean.loggedIn}" style="padding-right:3px;"><h:graphicImage name="images/logout.png" height="10px" width="10px" style="padding-right:3px;"/>logout</h:outputLink></li>
+				</ul>
+			    </div>	
+			    
+		</h:form>	
+		</div>
+	</div>
+
+</ui:composition>
+
+

@@ -1,0 +1,30 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+		
+	   <http auto-config="true" access-denied-page="/login.xhtml" >
+                <form-login login-page="/login.xhtml" default-target-url="/upload.xhtml"
+                        authentication-failure-url="/login.xhtml"  />
+                <logout  logout-url="/logout.xhtml"  invalidate-session="true" logout-success-url="/login.xhtml"/>
+                <intercept-url pattern="/login.xhtml" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_MEMBER"/>
+                <intercept-url pattern="/register" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_MEMBER"/>
+                <intercept-url pattern="/unregister" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_MEMBER"/>
+                <intercept-url pattern="/sendAll" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_MEMBER"/>
+                <intercept-url pattern="/home" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_MEMBER"/>
+                <intercept-url pattern="/md" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_MEMBER"/>
+                <intercept-url pattern="/sch.xhtml" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_MEMBER"/>
+                <intercept-url pattern="/json/**" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_MEMBER"/>
+                <intercept-url pattern="/schedule.xhtml" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_MEMBER"/>
+				<intercept-url pattern="/javax.faces.resource/**" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_MEMBER"/>
+                <intercept-url pattern="/**" access="ROLE_ADMIN,ROLE_MEMBER" />
+        </http>
+
+	<authentication-manager alias="authenticationManager">
+		<authentication-provider ref="memberAuthenticationProvider"/>
+	</authentication-manager>
+
+</beans:beans>

@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<title>Ad Cast and Vigil Cast - Contact Us - Pradeya
+		Technologies</title>
+	<!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
+	<meta name="viewport" content="width=device-width" />
+	<!-- End SlidesJS Required -->
+	<meta name="description"
+		content="Pradeya Technologies is a growing technology company based in Bangalore, India specializing in media casting services and products. Pradeya Ad Cast and Vigil Cast are advanced cloud based SaaS solutions which offer wide variety of advertisement and surveillance features for different market segments at an affordable cost." />
+	<link rel="shortcut icon" href="#{resource['images/favicon.ico']}"
+		type="image/x-icon" />
+
+	<f:facet name="last">
+		<h:outputStylesheet name="css/style1.css" />
+		<h:outputStylesheet name="css/new.css" />
+		<h:outputStylesheet name="css/dsh.css" />
+	</f:facet>
+
+</h:head>
+<h:body>
+	<ui:include src="header.xhtml" />
+
+	<div id="cont_1">
+
+		<h1 class="h1style">Manage Financial Planner</h1>
+
+	<div class="form_cont">	
+
+
+ 		
+
+
+			<h:form class="form_style">
+
+				<div class="partc">
+					<h2 class="subheading">Financial Planners</h2>
+					<br></br>
+					<p class="textleft">Manage all your Financial Planners and their details</p>
+					<p>Configure all of your Financial attributes</p>
+					<br></br>
+		<div class="newboxfour1">
+
+				<p:commandLink>
+					<div class="c1">
+								
+							<div class="numberCircle1"></div>
+							<h:outputText value="155 "  class="big-text1"  />  
+						<p class="small-text1">Your Clients</p>
+					</div>
+				</p:commandLink>
+
+
+				<p:commandLink>
+					<div class="c2">
+						
+							<div class="numberCircle1"></div>
+							<h:outputText value="05 "  class="big-text1"  /> 
+							
+						
+						<p class="small-text1">Financial Professionals</p>
+					</div>
+				</p:commandLink>
+				
+			<p:commandLink>
+				<div class="c3">
+					
+						<div class="numberCircle1"></div>
+						<h:outputText value="423"  class="big-text1"  /> 
+						
+					
+					<p class="small-text1">Weekly Appointments</p>
+				</div>
+			</p:commandLink>
+
+				<p:commandLink>
+					<div class="c4">
+						
+							<div class="numberCircle1"></div>
+							<h:outputText value="12 "  class="big-text1"  /> 
+							
+						
+						<p class="small-text1">Reference Links</p>
+					</div>
+				</p:commandLink>
+
+			</div>
+			
+						
+					
+<div class="icondiv1">
+<h:graphicImage name="images/hr.png" style="width:25px; height:25px; margin-left:5px; margin-top:4px;" />
+</div>
+<div class="textdiv1">
+ <h:outputLabel  value="Monkista-kinkista "  class="bigbar"/>  
+</div>
+<div class="numberdiv1">
+ <h:outputLabel  value="123% "  class="smallbar" />
+</div>
+<div class="numberdiv1">
+ <h:outputLabel value="323 "  class="smallbar1"/>
+</div>
+
+<div class="icondiv1">
+<h:graphicImage name="images/hr.png" style="width:25px; height:25px; margin-left:5px; margin-top:4px;" />
+</div>
+<div class="textdiv1">
+ <h:outputLabel  value="Monkista-kinkista "  class="bigbar"/>  
+</div>
+<div class="numberdiv1">
+ <h:outputLabel  value="123% "  class="smallbar" />
+</div>
+<div class="numberdiv1">
+ <h:outputLabel value="323 "  class="smallbar1"/>
+</div>
+
+<div class="icondiv1">
+<h:graphicImage name="images/hr.png" style="width:25px; height:25px; margin-left:5px; margin-top:4px;" />
+</div>
+<div class="textdiv1">
+ <h:outputLabel  value="Monkista-kinkista "  class="bigbar"/>  
+</div>
+<div class="numberdiv1">
+ <h:outputLabel  value="123% "  class="smallbar" />
+</div>
+<div class="numberdiv1">
+ <h:outputLabel value="323 "  class="smallbar1"/>
+</div>
+
+	
+					
+				</div>	
+	
+				<div class="partb">
+
+					<h2 class="subheading">Your Financial Planners</h2>
+					<br></br>
+
+					<p:commandButton id="selectCreateButton" style="float:left;"
+						value="Add New Planner"
+						action="#{organizationUIBean.createFinancialPlanner}" title="View"
+						ajax="false">
+					</p:commandButton>
+					<br></br> <br></br>
+
+					<p:dataTable var="financialPlanner"
+						value="#{organizationUIBean.allFinancialPlanner}"
+						style="width:660pxpx; ">
+						<p:column headerText="First Name" style="width:24%">
+							<h:outputText value="#{financialPlanner.firstName}" />
+						</p:column>
+
+						<p:column headerText="Details" style="width:24%">
+							<label> Phone: </label>
+							<h:outputText value="#{financialPlanner.phone}" />
+							<br></br>
+							<label> Role: </label>
+							<h:outputText value="#{financialPlanner.role}" />
+
+						</p:column>
+
+						<p:column headerText="Address" style="width:24%">
+							<label> Designation: </label>
+							<h:outputText value="#{financialPlanner.designation}" />
+							<br></br>
+							<label> Status: </label>
+							<h:outputText value="#{financialPlanner.status}" />
+							<br></br>
+
+						</p:column>
+
+						<p:column style="width:4%">
+							<p:commandButton id="selectEditButton" value="Edit"
+								action="#{organizationUIBean.editFinancialPlanner(financialPlanner)}"
+								title="View" ajax="false">
+								<f:setPropertyActionListener value="#{financialPlanner}"
+									target="#{organizationUIBean.selectedFinancialPlanner}" />
+							</p:commandButton>
+						</p:column>
+						
+
+						
+					</p:dataTable>
+				</div>
+			</h:form>
+		</div>
+
+		<ui:include src="tree.xhtml" />
+	</div>
+
+	<ui:include src="footer.xhtml" />
+
+</h:body>
+</html>

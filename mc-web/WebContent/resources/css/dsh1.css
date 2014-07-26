@@ -1,0 +1,217 @@
+/* container of dashboard */
+.dshbox {
+	margin: 3px;
+	margin-bottom: -28px;
+	float: right;
+	width: 720px;
+}
+
+/* sent mail ------------------------------------------------------------*/
+.smailbox {
+	float: left;
+	width: 209px;
+}
+
+.smailhead {
+	width: 202px;
+	height: 100px;
+	background-color: #79B900;
+	color: #3F6E00;
+	text-align: center;
+	font-family: helvetica;
+}
+
+.smailfoot {
+	width: 202px;
+	height: 60px;
+	background-color: #79B900;
+	color: #3F6E00;
+	text-align: center;
+	padding-top: 10px;
+	font-family: helvetica;
+}
+
+.smailfoot p {
+	font-size: 10px;
+}
+
+/* Received mail ------------------------------------------------------------*/
+.rmailbox {
+	float: left;
+	clear: float;
+	width: 209px;
+	height: 309px;
+}
+
+.rmailhead {
+	width: 202px;
+	height: 100px;
+	background-color: #1C58BA;
+	color: #11376F;
+	text-align: center;
+	font-family: helvetica;
+}
+
+.rmailfoot {
+	width: 202px;
+	height: 60px;
+	background-color: #1C58BA;
+	color: #11376F;
+	text-align: center;
+	padding-top: 10px;
+	font-family: helvetica;
+}
+
+/* Gender ------------------------------------------------------------*/
+.gender {
+	float: left;
+	clear: float;
+	width: 300px;
+	height: 70px;
+	background-color: #6A6F72;
+	display: block-inline;
+}
+
+/* Age-group ------------------------------------------------------------*/
+.age-group {
+	float: left;
+	clear: float;
+	width: 300px;
+	height: 130px;
+	background-color: #424242;
+	margin-top: 5px;
+}
+
+/* visits ------------------------------------------------------------*/
+.visits {
+	float: left;
+	clear: float;
+	width: 300px;
+	height: 70px;
+	background-color: #D74E2A;
+	margin-top: 5px;
+}
+
+.visits p {
+	color: #C98D7E;
+	font-family: helvetica;
+	text-align: center;
+	padding: 15px;
+}
+
+.visits strong {
+	color: #AD4124;
+	font-size: 24px;
+}
+
+
+
+
+/* ap1 ------------------------------------------------------------*/
+.ap1 {
+	background-color: silver;
+	width: 720px;
+	height: 50px;
+	margin: 3px;
+	float: right;
+}
+
+.ap1 h3 {
+	color: #515254;
+	font-family: helvetica;
+	text-align: center;
+}
+
+.ap1 strong {
+	color: #E9F751;
+	font-size: 40px;
+}
+
+/*ap2 ----------------------------------------------------------------*/
+.ap2 {
+	background-color: #c5c5c5;
+	width: 720px;
+	height: 50px;
+	float: right;
+	margin: 3px;
+	display: inline;
+}
+
+.ap2 p {
+	color: #515254;
+	font-family: helvetica;
+	text-align: center;
+	float: left;
+	padding: 5px;
+	width: 225px;
+}
+
+.ap2 strong {
+	font-size: 24px;
+}
+
+/*gbox ----------------------------------------------------------------*/
+.gbox {
+	background-color: #79B900;
+	width: 720px;
+	/* height: 160px; */
+	float: right;
+	margin: 3px;
+}
+
+/*bbox ----------------------------------------------------------------*/
+.bbox {
+	background-color: #1C58BA;
+	width: 720px;
+	/* height: 160px; */
+	float: right;
+	margin: 3px;
+}
+
+
+/* ap1 ------------------------------------------------------------*/
+.aap1 {
+	/* background-color: silver; */
+	width: 720px;
+	height: 50px;
+	margin: 3px;
+	float: right;
+}
+
+.aap1 h3 {
+	color: #515254;
+	font-family: helvetica;
+	text-align: center;
+}
+
+.aap1 strong {
+	color: #E9F751;
+	font-size: 40px;
+}
+
+/*aap2 ----------------------------------------------------------------*/
+.aap2 {
+	/* background-color: #c5c5c5; */
+	width: 720px;
+	height: 50px;
+	float: right;
+	margin: 3px;
+	display: inline;
+}
+
+.aap2 p {
+	color: #515254;
+	font-family: helvetica;
+	text-align: center;
+	float: left;
+	padding: 5px;
+	width: 225px;
+}
+
+.aap2 strong {
+	font-size: 24px;
+	
+	
+	/*--------------------------------------------------------- test */
+
+	

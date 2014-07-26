@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<title>Ad Cast and Vigil Cast - Contact Us - Pradeya
+		Technologies</title>
+	<!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
+	<meta name="viewport" content="width=device-width" />
+	<!-- End SlidesJS Required -->
+	<meta name="description"
+		content="Pradeya Technologies is a growing technology company based in Bangalore, India specializing in media casting services and products. Pradeya Ad Cast and Vigil Cast are advanced cloud based SaaS solutions which offer wide variety of advertisement and surveillance features for different market segments at an affordable cost." />
+	<link rel="shortcut icon" href="#{resource['images/favicon.ico']}"
+		type="image/x-icon" />
+
+	<f:facet name="last">
+		<h:outputStylesheet name="css/style1.css" />
+		<h:outputStylesheet name="css/new.css" />
+		<h:outputStylesheet name="css/dsh.css" />
+		<h:outputStylesheet name="css/skdslider.css" />
+
+	</f:facet>
+			<h:outputScript name="js/jquery-1.9.1.min.js"/>
+		<h:outputScript name="js/skdslider.min.js"/>
+
+</h:head>
+<h:body>
+
+<ui:include src="lheader.xhtml" />
+		<div id="slider">
+		<div id="demo" class="skdslider">
+       
+<ul>
+<li>
+<h:graphicImage name="images/videowall.jpg" />
+<!--Slider Description example-->   
+ <div class="slide-desc">
+		<h2>Media Casting</h2>
+		<p>Cast your images and videos to any display </p>
+  </div>
+</li>
+<li><h:graphicImage name="images/anydisplay.jpg" />
+   <div class="slide-desc">
+		<h2>Location based casting</h2>
+		<p>Cast your media based on the display location </p>
+  </div>
+</li>
+<li><h:graphicImage name="images/scheduler.png" />
+  <div class="slide-desc">
+		<h2>Powerful Scheduler</h2>
+		<p>Use powerful scheduler to schedule media casting to a display</p>
+  </div>
+</li>
+</ul>
+</div></div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery('#demo').skdslider({'delay':5000, 'fadeSpeed': 2000,'showNextPrev':true,'showPlayButton':true,'autoStart':true});
+			jQuery('#demo1').skdslider({'delay':5000, 'fadeSpeed': 2000,'autoStart':true,'pauseOnHover':true});
+		});
+</script>
+
+	<div id="cont_1">
+
+		<div id="row1">
+
+
+			<div >
+				
+				<!-- <h:graphicImage name="images/blue.png" width="160px" height="35px" style=" margin:0 auto;  "/> -->
+				<div  style=" margin:10px auto;  width:160px; height:30px; background-color:#C7C7C7; -webkit-border-radius:0 0 10px 10px; -moz-border-radius:0 0 10px 10px; border-radius:0 0 10px 10px;">
+					<h5 style="margin-top:-15px; padding:5px; font-family:helvetica; position:relative;">Log in</h5><h:graphicImage name="images/lock.png" height="19px"  style=" height:20px; float:left; margin-left:38px; margin-top:-24px; position:relative;" /><br></br>
+				</div>
+
+			<h:form style="color:#999999;">
+
+				<h:panelGrid columns="1" padding="10" >
+					<p:inputText id="j_username" value="#{loginUIBean.username}"
+						style="width:180px;">
+					</p:inputText>
+					
+					<p:password id="j_password" value="#{loginUIBean.password}"
+						style="width:180px;">
+					</p:password>
+										<p:commandButton id="login" value="Sign In"
+						style="width:165px; height:30px;background-color:#C7C7C7; color:#000; border:none;"
+						action="#{loginUIBean.login}" ajax="false" />
+				</h:panelGrid>
+			</h:form>
+					<h:link name="#" style="color:#999999; font-family:sans-serif; font-size:12px;  ">Forgot password ?</h:link>
+			<br></br>
+			</div>
+
+		
+
+
+		</div>
+	</div>
+<ui:include src="footer.xhtml" />
+  
+</h:body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<title>Ad Cast and Vigil Cast - Contact Us - Pradeya
+		Technologies</title>
+	<!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
+	<meta name="viewport" content="width=device-width" />
+	<!-- End SlidesJS Required -->
+	<meta name="description"
+		content="Pradeya Technologies is a growing technology company based in Bangalore, India specializing in media casting services and products. Pradeya Ad Cast and Vigil Cast are advanced cloud based SaaS solutions which offer wide variety of advertisement and surveillance features for different market segments at an affordable cost." />
+	<link rel="shortcut icon" href="#{resource['images/favicon.ico']}"
+		type="image/x-icon" />
+
+	<f:facet name="last">
+	<h:outputStylesheet name="css/style1.css" />
+		<h:outputStylesheet name="css/new.css" />
+		<h:outputStylesheet name="css/dsh.css" />
+
+	</f:facet>
+
+</h:head>
+<h:body>
+	<ui:include src="header.xhtml" />
+
+
+	<div id="cont_1">
+
+		<h1 class="h1style">Create Organization</h1>
+
+		<div class="form_cont">
+
+			<h:form class="form_style">
+
+
+				<div class="partb">
+					<h2 class="subheading">Organization Contact details</h2>
+					<p class="sheading">Organization Details</p>
+					<br></br>
+					<h:panelGrid columns="2"
+						style=" display:block; width:300px; padding:auto; margin-left:28px;">
+						<h:outputLabel for="orgName" value="Organization name:" />
+						<p:inputText id="orgName"
+							value="#{organizationUIBean.selectedOrganization.detail.orgName}"
+							required="false" label="Organization name">
+						</p:inputText>
+
+						<h:outputLabel for="status" value="Status:" />
+						<p:inputText id="status"
+							value="#{organizationUIBean.selectedOrganization.detail.status}"
+							required="false" label="Status">
+						</p:inputText>
+
+						<h:outputLabel for="established" value="Established:" />
+						<p:inputText id="established"
+							value="#{organizationUIBean.selectedOrganization.detail.established}"
+							required="false" label="Established">
+						</p:inputText>
+						<h:outputLabel for="address1" value="address1:" />
+						<p:inputText id="address1"
+							value="#{organizationUIBean.selectedOrganization.detail.address1}"
+							required="false" label="address1">
+						</p:inputText>
+
+						<h:outputLabel for="address2" value="address2:" />
+						<p:inputText id="address2"
+							value="#{organizationUIBean.selectedOrganization.detail.address2}"
+							required="false" label="address2" />
+						<h:outputLabel for="email" value="email:" />
+						<p:inputText id="email"
+							value="#{organizationUIBean.selectedOrganization.detail.email}"
+							required="false" label="email">
+						</p:inputText>
+
+
+
+						<h:outputLabel for="phone" value="phone:" />
+						<p:inputText id="phone"
+							value="#{organizationUIBean.selectedOrganization.detail.phone}"
+							required="false" label="phone" />
+
+					</h:panelGrid>
+				</div>
+
+				<p:commandButton id="saveO" value="Save"
+					style="float:left; margin-left:620px; margin-top:5px;"
+					action="#{organizationUIBean.saveOrganization}" ajax="false" />
+	<!-- watermark -->
+	<p:watermark for="orgName" value="Eg: Pradeya" />
+	<p:watermark for="status" value="Eg: active" />
+	<p:watermark for="established" value="Eg: Established" />
+	<p:watermark for="address1" value="Eg: Address" />
+		<p:watermark for="address2" value="Eg: Address" />
+<p:watermark for="email" value="Eg: Jhon@xyz.com" />
+		<p:watermark for="phone" value="Eg: 9988776655" />
+			</h:form>
+		</div>
+		<ui:include src="tree.xhtml" /> 
+	</div>
+
+
+	<ui:include src="footer.xhtml" />
+
+</h:body>
+</html>

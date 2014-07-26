@@ -1,0 +1,78 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+		<div id="cont_1">
+
+		<h1 class="h1style">Organization Management</h1>
+
+		<div class="form_cont">
+
+			<h:form class="form_style">
+
+				<div class="parta">
+					<h2 class="subheading">Details</h2>
+					<br></br>
+					<p class="textleft">Manage all organizations and its details</p>
+					<br></br>
+					<p>You can control all parameters and configure Organizational attributes.</p>
+					<br></br>
+				</div>
+				<div class="partb">
+
+					<h2 class="subheading">Organization</h2>
+					<br></br>
+
+					<p:commandButton id="selectCreateButton" style="float:left;"
+						value="Add New Organization"
+						action="#{organizationUIBean.createOrganization}" title="View" ajax="false">
+					</p:commandButton>
+					<br></br> <br></br>
+
+					<p:dataTable var="organization"
+						value="#{organizationUIBean.allOrganization}" style="width:660pxpx; ">
+						
+						<p:column headerText="ID" style="width:24%">
+							<h:outputText value="#{organization.id}" />
+						</p:column>
+						
+						<p:column headerText="Name" style="width:24%">
+							<h:outputText value="#{organization.detail.orgName}" />
+						</p:column>
+
+						<p:column headerText="Status" style="width:24%">
+							<label> Status: </label>
+							<h:outputText value="#{organization.detail.status}" />
+							<br></br>
+
+						</p:column>
+
+						<p:column style="width:4%">
+							<p:commandButton id="selectDetailsButton" value="More"
+								action="#{organizationUIBean.financialPlannerList}" title="View"
+								ajax="false">
+								<f:setPropertyActionListener value="#{organization}"
+									target="#{organizationUIBean.selectedOrganization}" />
+							</p:commandButton>
+						</p:column>
+
+						<p:column style="width:4%">
+							<p:commandButton id="selectEditButton" value="Edit"
+								action="#{organizationUIBean.editOrganization(organization)}"
+								title="View" ajax="false">
+								<f:setPropertyActionListener value="#{organization}"
+									target="#{organizationUIBean.selectedOrganization}" />
+							</p:commandButton>
+						</p:column>
+						
+
+					</p:dataTable>
+				</div>
+			</h:form>
+		</div>
+		<ui:include src="tree.xhtml" />
+	</div>
+
+	</ui:composition>

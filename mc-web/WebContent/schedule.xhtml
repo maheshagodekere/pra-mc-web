@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<title>Ad Cast and Vigil Cast - Contact Us - Pradeya
+		Technologies</title>
+	<!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
+	<meta name="viewport" content="width=device-width" />
+	<!-- End SlidesJS Required -->
+	<meta name="description"
+		content="Pradeya Technologies is a growing technology company based in Bangalore, India specializing in media casting services and products. Pradeya Ad Cast and Vigil Cast are advanced cloud based SaaS solutions which offer wide variety of advertisement and surveillance features for different market segments at an affordable cost." />
+	<link rel="shortcut icon" href="#{resource['images/favicon.ico']}"
+		type="image/x-icon" />
+
+	<f:facet name="last">
+		<h:outputStylesheet name="css/style1.css" />
+		<h:outputStylesheet name="css/new.css" />
+		<h:outputStylesheet name="css/dsh.css" />
+		<h:outputStylesheet name="css/cal-heatmap.css" />
+	</f:facet>
+	<h:outputScript library="primefaces" name="jquery/jquery.js" />
+	<h:outputScript name="js/d3.min.js" />
+	<h:outputScript name="js/cal-heatmap.min.js" />
+
+</h:head>
+<h:body>
+	<ui:include src="header.xhtml" />
+	<!-- h:form id="sh"-->
+		<div id="cont_1">
+
+			<h1 class="h1style">Media Schedule</h1>
+			<div class="form_cont1">
+
+				<div class="parttop">
+					<div class="partleft">
+						<h2 class="subheading">Schedule your media to your display</h2>
+						<br></br>
+
+						<h:outputText
+							value="Broadcast your selected media right now to all displays ? " />
+						<p:selectBooleanButton value="true" onLabel="No" offLabel="Yes" offIcon="ui-icon-check" onIcon="ui-icon-close" />
+						<br></br>
+						<h:outputText styleClass="ps"
+							value="ps: current scheduled media cast will be overridden" />
+						<br></br> <br></br>
+						<p:separator id="separator" />
+						<br></br>
+						<h:outputText
+							value="Cast your selected media at later time using the calander below" />
+						<br></br> <br></br>
+
+
+						<div style="margin: 0px 0">
+
+							<div id="cal-heatmap" />
+
+							<p:commandButton id="next" style="float:right" value="Nxt"></p:commandButton>
+							<p:commandButton id="previous" style="float:right" value="Prv"></p:commandButton>
+							<br></br><br></br>
+
+							<div id="cal-heatmap-hour" />
+							<br></br><br></br>
+							<div style="float:right">
+							<h:outputLabel for="booked" value="Booked:"/>  <p:keyboard id="booked" value="22" maxlength="3" style="width:50px;height:30px;font-size:26px !important;" keypadOnly="true"/>  
+							<h:outputLabel for="slot" value="Total Slots:"/><h:outputLabel for="slot" value="150" style="width:50px;height:30px;font-size:26px !important;"/> 
+							</div>
+						</div>
+							
+
+						<script type='text/javascript'>
+							//<![CDATA[
+
+							/* $("#rewind-a-btn").on("click", function(event) {
+								calendar.rewind();
+							}); */
+							var startDate = new Date(2014, 1);
+							//http://kamisama.github.io/cal-heatmap/v2/datas-hours.json
+							var calendar = new CalHeatMap();
+							var dt = new Date();
+							var dt2;
+							calendar.init({
+								data : "http://localhost:8080/mc-web/heatmap",
+								itemSelector : "#cal-heatmap",
+								start : startDate,
+								minDate : new Date(2014, 1),
+								maxDate : new Date(2014, 8),
+								domain : "month",
+								subDomain : "day",
+								domainGutter : 10,
+								range : 4,
+								previousSelector : "#previous",
+								nextSelector : "#next",
+								domainMargin : 6,
+								cellSize : 17,
+								scale : [ 20, 30, 40, 50 ],
+								//tooltip : true,
+								highlight : [ "now", dt2 ],
+								legendVerticalPosition : "top",
+								subDomainTextFormat : "%d",
+								onClick : function(date, nb) {
+									calendar.highlight(date);
+								}
+							});
+
+							$("#previous").on("click", function(e) {
+								//alert("No more domains to load");
+								e.preventDefault();
+								if (!calendar.previous()) {
+									//alert("No more domains to load");
+								}
+							});
+
+							$("#next").on("click", function(e) {
+								//alert("No more domains to load");
+								e.preventDefault();
+								if (!calendar.next()) {
+									//alert("No more domains to load");
+								}
+							});
+							
+							var cal = new CalHeatMap();
+							cal.init({
+								itemSelector : "#cal-heatmap-hour",
+								domain : "day",
+								subDomain : "hour",
+								rowLimit : 1,
+								domainGutter : 1,
+								data : "http://localhost:8080/mc-web/heatmap",
+								start : dt,
+								cellSize : 15,
+								cellPadding : 5,
+								range : 1,
+								//verticalOrientation : true,
+								subDomainTextFormat : function(date, value) {
+									//return date.getHours()+"A";
+									return date.getHours();
+								},
+								highlight : [ "now" ],
+								displayLegend : true,
+								legendVerticalPosition : "bottom",
+								label : {
+									position : "top"
+								},
+								legend : [ 1, 2, 3, 4 ],
+								legendColors : [ "#ecf5e2", "#232181" ],
+								onClick : function(date, nb) {
+									cal.highlight(date);
+								}
+							});
+
+							/* $("#location").on("change",function(e) {
+							  var selected = $("#location f:selectItem:selected");  //This should be the selected object
+							  $.get("textdata/" + $(this).val() + ".txt", { "f:selectItem": selected.val() }, function(data) {
+							     //Now data is the results from the DropdownRetrievalScript.php
+							     $("select[name="second-choice"]").html(data);
+							  }
+							});  */
+
+							//]]>
+						</script>
+					</div>
+					<div class="partright">
+						<h2 class="subheading3">Selected Media</h2>
+						
+
+						<p:graphicImage style="text-align:center;" value="#{resource['images/anydisplay.jpg']}"
+							width="130" height="95">
+						</p:graphicImage>
+						<br></br><br></br>
+						<h2 class="subheading3">Schedule Options</h2>
+						
+						<p:scrollPanel style="height:140px" mode="native">
+							<p:dataTable id="op" var="option" value="#{scheduleUIBean.optionDataModel}" paginator="false" rows="10"  
+                 					selection="#{option.selectedOption}" >  
+                 					<p:column selectionMode="single" style="width:2%" />  
+								<p:column >
+									<h:outputText value="#{option.name}" />
+								</p:column>							
+						</p:dataTable>
+						</p:scrollPanel>
+						
+						<br></br>
+						<h2 class="subheading3">Display Options</h2>
+						<!-- p:separator id="separator4" / -->
+						<p:scrollPanel style="height:200px" mode="native" >
+							<p:treeTable id="multiselect"  value="#{treeCheckboxBean.root}"
+								var="document" selectionMode="checkbox" scrollable="false" scrollHeight="190" scrollWidth="300"
+								selection="#{treeCheckboxBean.selectedNodes}">
+								<p:column >
+									<h:outputText value="#{document.name}" />
+								</p:column>
+							</p:treeTable>
+						</p:scrollPanel>
+					</div>
+					<br></br><br></br><br></br>
+					<p:commandButton id="schedule" style="padding:5px;width:200px;height:50px;float:right" value="Schedule"></p:commandButton>
+				</div>
+				
+
+
+
+			</div>
+
+			<!-- ui:include src="tree.xhtml" /-->
+		</div>
+	<!-- /h:form-->
+
+	<ui:include src="footer.xhtml" />
+
+</h:body>
+</html>
